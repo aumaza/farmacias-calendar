@@ -1,0 +1,97 @@
+create database farmacia_calendar;
+
+Todas tablas tendrán la siguiente estructura en su declarción:
+fc_nombre_tabla
+
+fc sin las iniciales de farmacia_calendar
+fc funcionará como prefijo, esto se utiliza como norma de programación
+haciendo alución a la app en cuestión y por seguridad. Debido a posibles ataques externos.
+
+# ===================================== #
+sqls básicos
+# ===================================== #
+show tables;
+show columns from fc_usuarios;
+show columns from fc_farmacias;
+show columns from fc_calendario;
+show columns from fc_obra_social;
+show columns from fc_tipo_pago;
+
+select * from fc_usuarios;
+select * from fc_farmacias;
+select * from fc_calendario;
+select * from fc_obra_social;
+select * from fc_tipo_pago;
+
+
+# ===================================== #
+sqls compuestos
+# ===================================== #
+
+select id, fecha, (select nombre_farmacia from fc_farmacias where fc_farmacias.id = fc_calendario.id_farmacia) as farmacia from fc_calendario where id_farmacia = 2;
+select fecha,
+       (select nombre_farmacia from fc_farmacias where fc_farmacias.id = fc_calendario.id_farmacia) as farmacia
+       from fc_calendario;
+
+
+# ===================================== #
+sqls modificciones
+# ===================================== #
+alter table fc_farmacias add column id_tipo_pago int(11) after obra_social;
+
+# ===================================== #
+tabla usuarios
+# ===================================== #
+create table if not exists fc_usuarios(
+id int(11) auto_increment primary key,
+name varchar(30) binary not null,
+user varchar(65) binary not null,
+password varchar(74) binary not null,
+email varchar(90) not null,
+task int(11) not null,
+avatar varchar(500),
+role int(1) default 1 not null
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+# ===================================== #
+tabla farmacias
+# ===================================== #
+create table if not exists fc_farmacias(
+id int(11) auto_increment primary key,
+nombre_farmacia varchar(100) not null,
+direccion_farmacia varchar(100) not null,
+telefono_1 varchar(10),
+telefono_2 varchar(10),
+email varchar(90),
+obra_social int(1),
+id_tipo_pago int(11)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+# ===================================== #
+tabla calendario
+# ===================================== #
+create table if not exists fc_calendario(
+id int(11) auto_increment primary key,
+fecha date not null,
+id_farmacia int(11) not null
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+# ===================================== #
+tabla obras sociales
+# ===================================== #
+create table if not exists fc_obra_social(
+id int(11) auto_increment primary key,
+descripcion varchar(100) not null,
+sigla varchar(50) not null
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# ===================================== #
+tabla tipos de pago
+# ===================================== #
+create table if not exists fc_tipo_pago(
+id int(11) auto_increment primary key,
+descripcion varchar(50) not null
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
