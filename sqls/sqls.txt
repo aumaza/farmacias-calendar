@@ -14,14 +14,16 @@ show tables;
 show columns from fc_usuarios;
 show columns from fc_farmacias;
 show columns from fc_calendario;
-show columns from fc_obra_social;
+show columns from fc_obras_sociales;
 show columns from fc_tipo_pago;
 
 select * from fc_usuarios;
 select * from fc_farmacias;
 select * from fc_calendario;
-select * from fc_obra_social;
+select * from fc_obras_sociales;
 select * from fc_tipo_pago;
+
+drop table fc_obras_sociales;
 
 
 # ===================================== #
@@ -82,10 +84,17 @@ id_farmacia int(11) not null
 # ===================================== #
 tabla obras sociales
 # ===================================== #
-create table if not exists fc_obra_social(
+create table if not exists fc_obras_sociales(
 id int(11) auto_increment primary key,
-descripcion varchar(100) not null,
-sigla varchar(50) not null
+codigo varchar(50) not null,
+descripcion varchar(200) not null,
+sigla varchar(50) not null,
+domicilio varchar(100) not null,
+codigo_postal varchar(10) not null,
+localidad varchar(100) not null,
+provincia varchar(100) not null,
+telefono varchar(30) not null,
+email varchar(50)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # ===================================== #
@@ -95,3 +104,13 @@ create table if not exists fc_tipo_pago(
 id int(11) auto_increment primary key,
 descripcion varchar(50) not null
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+# ================================================== #
+upload data from csv file to table obras_sociales
+# ================================================== #
+load data local infile '/mnt/storage/server/farmacias-calendar/sqls/obras_sociales.csv'
+into table fc_obras_sociales fields terminated by ';' enclosed by '"' lines terminated by '\n'
+(codigo,descripcion,sigla,domicilio,codigo_postal,localidad,provincia,telefono,email);
+
+
