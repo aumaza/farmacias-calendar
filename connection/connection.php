@@ -1,6 +1,7 @@
 <?php
 
-$dbhost = 'slackzone.ddns.net';
+//$dbhost = 'slackzone.ddns.net';
+$dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'slack142';
 $dbase = 'farmacia_calendar';
