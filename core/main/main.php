@@ -22,7 +22,7 @@
         while($row = mysqli_fetch_array($query)){
           $nombre = $row['name'];
           $user_id = $row['id'];
-          $avatar = '..'.substr($row['avatar'], 7);
+          $avatar = '..'.substr($row['avatar'], 5);
                   
         }
       }else{

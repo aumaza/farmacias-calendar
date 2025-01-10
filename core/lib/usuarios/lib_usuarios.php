@@ -212,7 +212,9 @@ class Usuarios{
                         <div class="jumbotron">
                         <div class="alert alert-info">
                         <h2><img src="../img/icons/actions/view-process-own.png"  class="img-reponsive img-rounded" alt="img" /> Mis Datos</h2>
-                        </div>
+                        </div><hr>
+                        <button type="button" class="btn btn-primary btn-sm" value="'.$user_id.'" onclick="callChangeAvatar(this.value);">
+                            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Cambiar Avatar</button><hr>
 
                         <form id="fr_mis_datos_ajax" method="POST">
                             <div class="form-group">
@@ -238,7 +240,7 @@ class Usuarios{
                                 echo '<input type="text" class="form-control" id="task" name="task" value="Usuario" disabled>';
                             }
 
-                echo '</div><br>
+                    echo '</div><br>
 
                             <div class="alert alert-warning">
                             <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Cambiar Password</h2>
@@ -268,6 +270,32 @@ class Usuarios{
                         </div>';
 
 } // END OF FUNCTION
+
+
+    public function changeAvatar($id){
+
+        echo '<div class="container">
+                <div class="jumbotron">
+                <div class="alert alert-info">
+                    <h2><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar Avatar</h2>
+                </div><hr>
+                <form id="fr_change_avatar_ajax" method="POST" enctype="multipart/form-data">
+                <input type="hidden" id="id" name="id" value="'.$id.'">
+                <div class="alert alert-success">
+                    <div class="form-group">
+                    <label for="my_file">Archivo:</label>
+                    <input type="file" id="my_file" name="my_file">
+                    </div>
+                </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="update_avatar">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Cambiar</button>
+                </form>
+                <div id="messageAvatarUpdate"></div>
+                </div>
+                </div>';
+
+    } // FIN DE LA FUNCTION
 
     // PERSISTENCIA
 
@@ -321,6 +349,62 @@ class Usuarios{
 
 } // EN OF FUNCTION
 
+
+    public function updateAvatar($nUser,$id,$file,$conn,$dbname){
+
+
+        if($file != ''){
+
+                    			$targetDir = '../../avatars/';
+								$fileName = $file;
+								$targetFilePath = $targetDir . $fileName;
+
+								$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+
+									   // Allow certain file formats
+									    $allowTypes = array('png','jpg');
+
+									    if(in_array($fileType, $allowTypes)){
+
+									       // Upload file to server
+									        if(move_uploaded_file($_FILES["my_file"]["tmp_name"], $targetFilePath)){
+
+
+									        $sql_1 = "update fc_usuarios set avatar = $nUser->setAvatar('$targetFilePath') where id = '$id'";
+
+									        mysqli_select_db($conn,$dbname);
+									        $query_1 = mysqli_query($conn,$sql_1);
+
+
+									            if($query_1){
+
+                                                    $success = 'Se ha actualizado la imagen de usuario con id: "'.$id.'"';
+                                                    $nUser->successMysqlUsers($success);
+												    echo 1; // sea actualizo la base  y subio bien el archivo
+
+
+									            }else{
+
+												   echo 2; // solo se subio el archivo
+
+									            }
+									            }else{
+
+									              echo 3; // verificar permisos del directorio
+
+									            }
+									            }else{
+
+												  echo 4; // solo archivos png, jpg
+									            }
+
+
+		                    	}else{
+                                    echo 7; // no se ha seleccionado ningun archivo
+                                }
+
+    } // FUN DE LA FUNCTION
+
     // MENEJO DE  ACTUALIZACION EXITOSA
 
     public function successMysqlUsers($success){
@@ -332,7 +416,7 @@ class Usuarios{
         if (file_exists($fileName)){
 
         $file = fopen($fileName, 'a');
-        fwrite($file, "\n".$date);
+        fwrite($file, "\n".$message);
         fclose($file);
         chmod($file, 0777);
 
@@ -355,7 +439,7 @@ class Usuarios{
         if (file_exists($fileName)){
 
         $file = fopen($fileName, 'a');
-        fwrite($file, "\n".$date);
+        fwrite($file, "\n".$message);
         fclose($file);
         chmod($file, 0777);
 
