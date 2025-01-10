@@ -164,7 +164,11 @@ function logOut($nombre){
     
     echo '<div class="container">
     			<div class="jumbotron">
-                <h1 align=center>Hasta Luego '.$nombre.'</h1><hr>
+    			<div class="alert alert-info">
+                    <p align=center><strong>Hasta Luego</strong></p>
+                    <p align=center><strong>'.$nombre.'</strong></p>
+                </div>
+                <hr>
                 <p align=center><img src="logout.gif"  class="img-reponsive img-rounded"></p><hr>
                 <meta http-equiv="refresh" content="4;URL=../../logout.php "/>
             </div>

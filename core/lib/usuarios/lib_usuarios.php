@@ -139,10 +139,12 @@ class Usuarios{
                         if($nUsuario->getRole($fila['role']) == '0'){
                             echo '<td align=center><span class="label label-danger">'.$disable.'</span></td>';
                         }
-                        echo '<td class="text-nowrap" align=center>
-                                        <button type="button" class="btn btn-warning btn-block" value="'.$fila['id'].'"  onclick="callEditEstado(this.value);">
-                                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar Estado</button>
-                                    </td>';
+                        echo '<td class="text-nowrap" align=center>';
+                                if($fila['id'] != 1){
+                                     echo '<button type="button" class="btn btn-warning btn-block" value="'.$fila['id'].'"  onclick="callEditEstado(this.value);">
+                                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar Estado</button>';
+                                }
+                                echo '</td>';
                                 $count++;
                     }
 
@@ -177,17 +179,18 @@ class Usuarios{
                     <div class="jumbotron">
                         <hr>
                         <div class="alert alert-info">
-                        <h3>
-                        <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
-                                    Cambiar Estado de: <strong>'.$nUsuario->getName($row['name']).'</strong>
-                        </h3>
+
+                        <p><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                                    Cambiar Estado del Usuario:</p>
+                        <p><strong>'.$nUsuario->getName($row['name']).'</strong><p>
+
                         </div>
                         <hr>
                         <form id="fr_edit_role_ajax" method="POST">
                             <input type="hidden" id="id_user" name="id_user" value="'.$id.'">
                             <div class="form-group">
-                                <label for="role">Estado:</label>
-                                <select class="form-control" id="role" name="role">
+                                <label for="role">Estado Actual:</label>
+                                <select class="form-control" id="role" name="role" data-toggle="tooltip" data-placement="top" title="Seleccione el estado al cual desea cambiar">
                                     <option value="1" '.($nUsuario->getRole($row['role']) == '1' ? "selected" : "").' style="color: green";>Habilitado</option>
                                     <option value="0" '.($nUsuario->getRole($row['role']) == '0' ? "selected" : "").' style="color: red;">Deshabilitado</option>
                                 </select>

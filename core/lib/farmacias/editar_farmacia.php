@@ -13,16 +13,18 @@
         $telefono_2 = mysqli_real_escape_string($conn,$_POST['telefono_2']);
         $email = mysqli_real_escape_string($conn,$_POST['email']);
         $obra_social = mysqli_real_escape_string($conn,$_POST['obra_social']);
+        $geo = mysqli_real_escape_string($conn,$_POST['geo']);
 
         if(($nombre_farmacia == '') ||
             ($direccion_farmacia == '') ||
                 ($telefono_1 == '') ||
                     ($telefono_2 == '') ||
                         ($email == '') ||
-                            ($obra_social == '')){
+                            ($obra_social == '') ||
+                                ($geo == '')){
                                     echo 5; // hay campos sin completar
                             }else{
-                                $nFarmacia->updateFarmacia($nFarmacia,$id,$nombre_farmacia,$direccion_farmacia,$telefono_1,$telefono_2,$email,$obra_social,$conn,$db_basename);
+                                $nFarmacia->updateFarmacia($nFarmacia,$id,$nombre_farmacia,$direccion_farmacia,$telefono_1,$telefono_2,$email,$obra_social,$geo,$conn,$db_basename);
                             }
 
 

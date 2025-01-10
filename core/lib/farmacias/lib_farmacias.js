@@ -349,6 +349,7 @@ $(document).ready(function(){
         const telefono_2 = document.querySelector('#telefono_2');
         const email = document.querySelector('#email');
         const obra_social = document.querySelector('#obra_social');
+        const geo = document.querySelector('#geo');
 
         const formData = new FormData(form);
         const values = [...formData.entries()];
@@ -361,6 +362,7 @@ $(document).ready(function(){
         formData.append('telefono_2', telefono_2.value);
         formData.append('email', email.value);
         formData.append('obra_social', obra_social.value);
+        formData.append('geo', geo.value);
 
          jQuery.ajax({
             type:"POST",

@@ -236,6 +236,8 @@ $(document).ready(function(){
                      console.log(values);
                      $('#file').val('');
                      setTimeout(function() { $(".close").click(); }, 2000);
+                     setTimeout(function() { window.opener.location.reload(); }, 3000);
+                     setTimeout(function() { window.close(); }, 4000);
                      }else if(r == 2){
                         var mensaje = '<br><div class="alert alert-danger alert-dismissible"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><p align=center><span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Sólo se ha subido el archivo sin impactar en la base de datos!</p></div>';
                         document.getElementById('messageAvatarUpdate').innerHTML = mensaje;
@@ -291,7 +293,7 @@ $(document).ready(function(){
 
 function callChangeAvatar(id){
     var ancho = 500;
-    var alto = 400;
+    var alto = 450;
     var left = (screen.width / 2) - (ancho / 2);
     var top = (screen.height / 2) - (alto / 2);
     let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=${ancho},height=${alto},left=${left},top=${top}`;

@@ -7,17 +7,17 @@ function mainNavBar($nombre,$avatar,$user_id){
 			  <div class="container-fluid">
 			    <div class="navbar-header">
 			    <form action="#" method="POST">
-			      <button class="btn btn-default btn-sm navbar-btn" type="submit" name="home">
-                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Calendario de Farmacias</button>
+			      <button class="btn btn-warning btn-sm navbar-btn" type="submit" name="home">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</button>
 			    </form>
 			    </div>
 
 			    <ul class="nav navbar-nav">
 			      
-			      <button type="button" class="btn btn-default btn-sm navbar-btn" data-toggle="modal" data-target="#myModalAbout">
+			      <button type="button" class="btn btn-info btn-sm navbar-btn" data-toggle="modal" data-target="#myModalAbout">
 			      	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> A cerca de..</button>
 			      
-			      <button type="button" class="btn btn-default btn-sm navbar-btn" data-toggle="modal" data-target="#myModalDocumentation">
+			      <button type="button" class="btn btn-success btn-sm navbar-btn" data-toggle="modal" data-target="#myModalDocumentation">
 			      	<span class="glyphicon glyphicon-book" aria-hidden="true"></span> Documentación</button>
 			    </ul>
 			    

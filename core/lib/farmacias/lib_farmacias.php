@@ -9,6 +9,7 @@ class Farmacias{
     private $telefono_2 = '';
     private $email = '';
     private $obra_social = '';
+    private $geo = '';
 
     // CONSTRUCTOR
     function __construct(){
@@ -19,6 +20,7 @@ class Farmacias{
         $this->telefono_2 = '';
         $this->email = '';
         $this->obra_social = '';
+        $this->geo = '';
     }
 
     // SETTERS
@@ -46,6 +48,9 @@ class Farmacias{
         $this->obra_social = $_os;
     }
 
+    private function setGeo($_geo){
+        $this->geo = $_geo;
+    }
 
     // GETTERS
     private function getNombreFarmacia($_nombre){
@@ -70,6 +75,10 @@ class Farmacias{
 
     private function getObraSocial($_os){
         return $this->obra_social = $_os;
+    }
+
+    private function getGEo($_geo){
+        return $this->geo = $_geo;
     }
 
 
@@ -285,7 +294,7 @@ class Farmacias{
                                         <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Calendario de Turnos</button</li>';
 
                       echo '</ul>
-                            <div class="panel-footer">Total</div>
+                            <div class="panel-footer" align=center> '.$nFarmacia->getGeo($row['geo']).'</div>
                         </div>
                         </div>
                     </div>';
@@ -414,6 +423,11 @@ class Farmacias{
                     <option value="1" '.(($nFarmacia->getObraSocial($row['obra_social']) == 1) ? "selected" : "").'>Atiende Obras Sociales</option>
                     <option value="0" '.(($nFarmacia->getObraSocial($row['obra_social']) == 0) ? "selected" : "").'>No Atiende Obras Sociales</option>
                 </select>
+              </div>
+
+              <div class="form-group">
+                <label for="comment"><span class="label label-default"> Ubicación Geografica</span></label>
+                <textarea class="form-control" rows="5" id="geo" name="geo"> '.$nFarmacia->getGeo($row['geo']).'</textarea>
               </div><br>
 
               <button type="submit" class="btn btn-primary btn-block" id="edit_farmacia">
@@ -691,7 +705,7 @@ class Farmacias{
 
     } // FIN DE LA FUNCION
 
-    public function updateFarmacia($nFarmacia,$id,$nombre_farmacia,$direccion_farmacia,$telefono_1,$telefono_2,$email,$obra_social,$conn,$dbname){
+    public function updateFarmacia($nFarmacia,$id,$nombre_farmacia,$direccion_farmacia,$telefono_1,$telefono_2,$email,$obra_social,$geo,$conn,$dbname){
 
         mysqli_select_db($conn,$dbname);
         $sql = "update fc_farmacias set ".
@@ -700,7 +714,8 @@ class Farmacias{
                 "telefono_1 = $nFarmacia->setTelefono1('$telefono_1'), ".
                 "telefono_2 = $nFarmacia->setTelefono2('$telefono_2'), ".
                 "email = $nFarmacia->setEmail('$email'), ".
-                "obra_social = $nFarmacia->setObraSocial('$obra_social') where id = '$id'";
+                "obra_social = $nFarmacia->setObraSocial('$obra_social'), ".
+                "geo = $nFarmacia->setGeo('$geo') where id = '$id'";
 
         $query = mysqli_query($conn,$sql);
 

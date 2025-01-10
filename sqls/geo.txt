@@ -1,0 +1,82 @@
+#===================================================================#
+farmacia malnis
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.913744833565!2d-58.537574947146226!3d-34.71388125329335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf45df08b5bd%3A0xe2d3d115e98bb6ec!2sFarmacia%20Malnis%20-%20S%C3%A1bados%20y%20Domingos%20consultar%20turnero%20aunque%20figure%20cerrado.!5e0!3m2!1ses!2sar!4v1736513382673!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia antartida
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.7875684317885!2d-58.5326919856505!3d-34.72660633443702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf6c92f43443%3A0xf6b53224abb7a55b!2sFarmacia%20Ant%C3%A1rtida!5e0!3m2!1ses!2sar!4v1736513623607!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia giusti
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1639.4713767169994!2d-58.53362807658867!3d-34.73183733555369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf7272454459%3A0x34d5f9b1bcdea094!2sFarmacia%20Giusti!5e0!3m2!1ses!2sar!4v1736513569606!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia sadop
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.805626149441!2d-58.52399626402423!3d-34.724785436315194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf10e980bdcb%3A0x45c65cb9a5bdeb0b!2sFarmacia%20SADOP!5e0!3m2!1ses!2sar!4v1736513700670!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia de la ciudad
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.8939191303742!2d-58.52438786654038!3d-34.71588097557926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf3dca909261%3A0xe367a7a3f28693c6!2sNueva%20Farmacia%20de%20la%20Ciudad!5e0!3m2!1ses!2sar!4v1736513759543!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia alzugaray
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.9042582886142!2d-58.538582116647184!3d-34.714838127526946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf4451b83107%3A0xdb3dfad213b3604!2sFarmacia%20Alzugaray!5e0!3m2!1ses!2sar!4v1736513846151!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia gatti
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.9137885503778!2d-58.54998150496046!3d-34.713876843679884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccff1c40c9a9d%3A0x37a1c84121fecb6e!2sFarmacia%20GATTI!5e0!3m2!1ses!2sar!4v1736513898999!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia iaquinta
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.9483530633567!2d-58.53719809678426!3d-34.71559987089444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf4600244c95%3A0x8be02d5f7f40b3e6!2sFarmacia%20Iaquinta!5e0!3m2!1ses!2sar!4v1736513966527!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia cano
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.8702610070448!2d-58.528155007830954!3d-34.73134999337583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb578e0fe35af%3A0xe03c9f4ca0fedb64!2sFarmacia%20Cano!5e0!3m2!1ses!2sar!4v1736514069223!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia gerez
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.85916523999043!2d-58.52686084198127!3d-34.73358735433954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf0c0a1e51a9%3A0xd86b50145666b036!2sGerez!5e0!3m2!1ses!2sar!4v1736514139519!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia rodriguez
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.8848475165715!2d-58.52834221017912!3d-34.72840856404677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf46db2414b7%3A0x7ae6d064da67c4ac!2sFarmacia%20Rodriguez%20Martin%20Miguel%20de%20G%C3%9Cemes%204089%20Cidad%20Evita!5e0!3m2!1ses!2sar!4v1736514387393!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia desanti
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.0061529013228!2d-58.54333414778105!3d-34.70455917133746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf5259288b59%3A0x40ff2d8d29762b9d!2sFarmacia%20de%20Santi!5e0!3m2!1ses!2sar!4v1736514507263!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia la quila (no está en los turnos)
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.0061529013228!2d-58.54333414778105!3d-34.70455917133746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf4d6968e461%3A0xeab02bb50c4995fb!2sLa%20Quila!5e0!3m2!1ses!2sar!4v1736514555352!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+#===================================================================#
+
+farmacia clozman
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.8807132588329!2d-58.52620824325897!3d-34.7172129317375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf3e143a7fe1%3A0xc86760fb63e436de!2sFarmacia%20Clozman!5e0!3m2!1ses!2sar!4v1736514692888!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

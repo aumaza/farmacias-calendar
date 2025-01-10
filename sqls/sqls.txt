@@ -35,6 +35,8 @@ select fecha,
        (select nombre_farmacia from fc_farmacias where fc_farmacias.id = fc_calendario.id_farmacia) as farmacia
        from fc_calendario;
 
+alter table fc_farmacias add column geo varchar(2000) after obra_social;
+
 
 # ===================================== #
 sqls modificciones
@@ -109,7 +111,7 @@ descripcion varchar(50) not null
 # ================================================== #
 upload data from csv file to table obras_sociales
 # ================================================== #
-load data local infile '/mnt/storage/server/farmacias-calendar/sqls/obras_sociales.csv'
+load data local infile '/mnt/sda2/htdocs/direccion-produccion/farmacias-calendar/sqls/obras_sociales.csv'
 into table fc_obras_sociales fields terminated by ';' enclosed by '"' lines terminated by '\n'
 (codigo,descripcion,sigla,domicilio,codigo_postal,localidad,provincia,telefono,email);
 
