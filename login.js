@@ -79,3 +79,17 @@ $(document).ready(function(){
         return false;
     });
 });
+
+// MOSTRAR OCULTAR CONTRASEÑA
+document.querySelector('#btn-show').addEventListener('click', e => {
+    const passwordInput = document.querySelector('#pwd');
+    if (e.target.classList.contains('show')) {
+        e.target.classList.remove('show');
+        e.target.textContent = 'Ocultar Contraseña';
+        passwordInput.type = 'text';
+    } else {
+        e.target.classList.add('show');
+        e.target.textContent = 'Ver Contraseña';
+        passwordInput.type = 'password';
+    }
+});

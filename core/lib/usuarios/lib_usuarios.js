@@ -320,4 +320,30 @@ function disabledPassword(){
 }
 
 
+// MOSTRAR OCULTAR CONTRASEÑA
+document.querySelector('#show_A').addEventListener('click', e => {
+    const passwordInput = document.querySelector('#password_1');
+    if (e.target.classList.contains('show')) {
+        e.target.classList.remove('show');
+        e.target.textContent = 'Ocultar Contraseña';
+        passwordInput.type = 'text';
+    } else {
+        e.target.classList.add('show');
+        e.target.textContent = 'Mostrar Contraseña';
+        passwordInput.type = 'password';
+    }
+});
+
+document.querySelector('#show_B').addEventListener('click', e => {
+    const passwordInput = document.querySelector('#password_2');
+    if (e.target.classList.contains('show')) {
+        e.target.classList.remove('show');
+        e.target.textContent = 'Ocultar Contraseña';
+        passwordInput.type = 'text';
+    } else {
+        e.target.classList.add('show');
+        e.target.textContent = 'Mostrar Contraseña';
+        passwordInput.type = 'password';
+    }
+});
 

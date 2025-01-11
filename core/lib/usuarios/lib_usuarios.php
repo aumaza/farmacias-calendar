@@ -256,11 +256,13 @@ class Usuarios{
                             <div class="form-group">
                             <label for="password_1">Password:</label>
                             <input type="password" class="form-control" id="password_1" name="password_1" disabled>
+                                <button type="button" class="btn btn-default btn-sm" id="show_A">Mostrar Contraseña</button>
                             </div>
 
                             <div class="form-group">
                             <label for="password_2">Repetir Password:</label>
                             <input type="password" class="form-control" id="password_2" name="password_2" disabled>
+                                <button type="button" class="btn btn-default btn-sm" id="show_B">Mostrar Contraseña</button>
                             </div>
 
                             <input type="hidden" id="id" name="id" value="'.$user_id.'">

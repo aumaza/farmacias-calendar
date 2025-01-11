@@ -76,7 +76,7 @@
 
         if(isset($_POST['registro'])){
             $nRegestry = new Regestry();
-            $nRegestry->formRegestry();
+            $nRegestry->formRegestry($conn,$db_basename);
         }
 
         if(isset($_POST['ingresar'])){

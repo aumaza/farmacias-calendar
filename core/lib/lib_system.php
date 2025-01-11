@@ -77,6 +77,7 @@ function formLogIn(){
 				    <div class="form-group">
 				      <label for="pwd"><span class="label label-default"> Password</span></label>
 				      <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Ingrese su password">
+				      <button type="button" class="btn btn-default btn-sm" id="btn-show">Ver Contraseña</button>
 				    </div><br>
 				    
 				    <div class="alert alert-info">

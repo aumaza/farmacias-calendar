@@ -48,15 +48,15 @@ class Password{
 				     <form id="fr_reset_password_ajax" method="POST">
 				      <div class="form-group">
 				        <label for="email"><span class="label label-default"> Email</span></label>
-				        <input type="email" class="form-control" id="user" name="user" placeholder="Por favor ingrese su email">
+				        <input type="email" class="form-control" id="user" name="user" placeholder="Por favor ingrese su email" data-toggle="tooltip" title="Ingrese el email con el que se registró">
 				      </div>
 				      <div class="form-group">
 				        <label for="pwd_1"><span class="label label-default"> Password</span></label>
-				        <input type="password" class="form-control" id="pwd_1" name="pwd_1" placeholder="Ingrese el password">
+				        <input type="password" class="form-control" id="pwd_1" name="pwd_1" placeholder="Ingrese el password" data-toggle="tooltip" title="La contraseña debe tener entre 10 y 15 caracteres"><button type="button" class="btn btn-default btn-sm" id="btn-show_1">Mostrar Contraseña</button>
 				      </div>
 				      <div class="form-group">
 				        <label for="pwd_2"><span class="label label-default"> Repita Password</span></label>
-				        <input type="password" class="form-control" id="pwd_2" name="pwd_2" placeholder="Ingrese el password nuevamente">
+				        <input type="password" class="form-control" id="pwd_2" name="pwd_2" placeholder="Ingrese el password nuevamente" data-toggle="tooltip" title="La contraseña debe tener entre 10 y 15 caracteres"><button type="button" class="btn btn-default btn-sm" id="btn-show_2">Mostrar Contraseña</button>
 				      </div><br>
 				      
 				      <div class="alert alert-success">

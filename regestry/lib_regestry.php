@@ -85,7 +85,12 @@ class Regestry{
 */
 
 
-public function formRegestry(){
+public function formRegestry($conn,$dbname){
+
+        mysqli_select_db($conn,$dbname);
+        $sql = "select * from fc_usuarios where id = 1";
+        $query = mysqli_query($conn,$sql);
+        $rows = mysqli_num_rows($query);
 
 		echo '<div class="container-fluid">
 					<div class="jumbotron">
@@ -93,26 +98,27 @@ public function formRegestry(){
 					<h3><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Registro de Usuario</h3>
 					</footer><hr>
 					<p><span class="label label-default"> Por favor complete los datos que le solicitamos para poder generar su usuario</span><hr>
+					<p><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        <span class="label label-warning"> El registro y uso de la aplicación es totalmente gratuito.</span><hr>
   
 				   <form id="fr_new_user_ajax" method="POST" enctype="multipart/form-data">
 				    
 				    <div class="form-group">
 				      <label for="name"><span class="label label-default"> Nombre y Apellido</span></label>
-				      <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su Nombre y Apellido">
+				      <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su Nombre y Apellido" data-toggle="tooltip" title="Ej.: Juan Ramirez">
 				    </div>
 
 				    <div class="form-group">
 				      <label for="email"><span class="label label-default"> Email</span></label>
-				      <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su Email">
+				      <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su Email" data-toggle="tooltip" title="Ej.: juan@gmail.com">
 				    </div>
 
-
-				     <div class="form-group">
+                    <div class="form-group">
 					  <label for="tasks"><span class="label label-default"> Tareas / Funciones</span></label>
 					  <select class="form-control" id="tasks" name="tasks">
 					    <option value="" selected disabled>Seleccionar</option>
-					    <option value="1">Sys Admin</option>
-					    <option value="2">Usuario</option>
+					    <option value="1" '.(($rows == 1) ? "disabled" : "enabled").'>Sys Admin</option>
+					    <option value="2" '.(($rows == 1) ? "selected" : "enabled").'>Usuario</option>
 					  </select>
 					</div>
 
@@ -131,12 +137,12 @@ public function formRegestry(){
 
 				    <div class="form-group">
 				      <label for="pwd"><span class="label label-default"> Password</span></label>
-				      <input type="password" class="form-control" id="pwd_1" name="pwd_1" placeholder="Ingrese su password">
+				      <input type="password" class="form-control" id="pwd_1" name="pwd_1" placeholder="Ingrese su password" data-toggle="tooltip" title="La contraseña debe tener entre 10 y 15 caracteres"><button type="button" class="btn btn-default btn-sm" id="btn-show_a">Mostrar Contraseña</button>
 				    </div>
 
 				    <div class="form-group">
 				      <label for="pwd"><span class="label label-default"> Repita Password</span></label>
-				      <input type="password" class="form-control" id="pwd_2" name="pwd_2" placeholder="Repita su password">
+				      <input type="password" class="form-control" id="pwd_2" name="pwd_2" placeholder="Repita su password" data-toggle="tooltip" title="La contraseña debe tener entre 10 y 15 caracteres"><button type="button" class="btn btn-default btn-sm" id="btn-show_b">Mostrar Contraseña</button>
 				    </div><br>
 				    
 				    <div class="alert alert-success">

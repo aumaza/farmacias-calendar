@@ -110,3 +110,30 @@ $(document).ready(function(){
         return false;
     });
 });
+
+// MOSTRAR OCULTAR CONTRASEÑA
+document.querySelector('#btn-show_a').addEventListener('click', e => {
+    const passwordInput = document.querySelector('#pwd_1');
+    if (e.target.classList.contains('show')) {
+        e.target.classList.remove('show');
+        e.target.textContent = 'Ocultar Contraseña';
+        passwordInput.type = 'text';
+    } else {
+        e.target.classList.add('show');
+        e.target.textContent = 'Mostrar Contraseña';
+        passwordInput.type = 'password';
+    }
+});
+
+document.querySelector('#btn-show_b').addEventListener('click', e => {
+    const passwordInput = document.querySelector('#pwd_2');
+    if (e.target.classList.contains('show')) {
+        e.target.classList.remove('show');
+        e.target.textContent = 'Ocultar Contraseña';
+        passwordInput.type = 'text';
+    } else {
+        e.target.classList.add('show');
+        e.target.textContent = 'Mostrar Contraseña';
+        passwordInput.type = 'password';
+    }
+});
